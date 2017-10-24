@@ -32,8 +32,7 @@ async def whatislife():
 	await bot.say("I'm only a robot :( I don't have the answers to everything. But if I had to, I'd say: You are life. ;)")
 	
 @bot.command
-async def _bot():
-	"""Is the bot cool?"""
+async def isbotcool():
 	await bot.say("I'm not cool yet, but maybe I will be someday. :) ")
 
 @client.event
