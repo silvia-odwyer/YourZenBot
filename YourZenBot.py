@@ -114,4 +114,4 @@ async def on_message(message):
 		await client.send_message(message.channel, "I'm only a bot :( I don't have the answers to everything. But if I had to, I'd say: You are life. ;)")
 	await bot.process_commands(message)
 		
-client.run("MzcyNDY1Nzg0NDYwNTQxOTUz.DNElkQ.R2O7zGyOp13gbe7VGu_VXEBGHVI") # To get the bot to work, make sure to insert your Client's ID in between the apostrophes.
+client.run("INSERT YOUR CLIENT ID") # To get the bot to work, make sure to insert your Client's ID in between the apostrophes.
