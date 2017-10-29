@@ -2,7 +2,7 @@
 A basic Discord bot that acts as a Magic 8 Ball/fortune cookie, and provides some little pieces of wisdom when you ask for them.
 
 ## What Is YourZenBot?
-YourZenBot is a Discord bot written using Discord.py Library that can send you clues on what your future holds, answer some yes-or-no style questions, and give pieces of wisdom. 
+YourZenBot is a Discord bot written using the Discord.py Library that can send you clues on what your future holds, answer some yes-or-no style questions, and give pieces of wisdom. 
 
 Do you want to inject some extra positivity into your Discord life or gaming?
 
@@ -12,8 +12,11 @@ Just ask YourZenBot for advice! This basic Discord bot can be both your confidan
 
 ## Commands 
 `!fortune`	-> Get a prediction on what the next few days could hold.
+
 `!future`		-> Same as the !fortune command.
+
 `!question`	-> The bot will prompt you for a YES or NO-style question. Ask your question and get an answer.
+
 `!wisewords`	-> Get a little piece of wisdom for the day.
 
 ## Examples Of YourZenBot In Action
