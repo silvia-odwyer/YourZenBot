@@ -1,6 +1,11 @@
+'''
+A basic Discord bot written using the API wrapper 'Discord.py'
+See the README file for complete instructions on how to use this bot.
+'''
 import discord
 import asyncio
 import random
+import time
 from discord.ext import commands
 
 client = discord.Client()
@@ -18,56 +23,95 @@ async def on_ready():
 	print("Your client user ID is: ", client.user.id)
 	print("------")
 	print("Has the client logged in?", client.is_logged_in)
-	
-@bot.command()
-async def howareyou():
-	await bot.say("I am good, thanks! I'm only a bot, I don't have feelings, but maybe I will someday :D")
-	
-@bot.command()
-async def hello():
-	await bot.say("Hello! I am YourZenBot, a Discord bot that tries to add some positivity to your life. :) But enough talking. Time for you to talk to me! I'm waiting :)")
-	
-@bot.command()
-async def whatislife():
-	await bot.say("I'm only a robot :( I don't have the answers to everything. But if I had to, I'd say: You are life. ;)")
-	
-@bot.command
-async def isbotcool():
-	await bot.say("I'm not cool yet, but maybe I will be someday. :) ")
 
 @client.event
 async def on_message(message):
 	userMessage = message.content.lower()
-	if userMessage == "!hithere":
-		await client.send_message(message.channel, "Hi! :D")
-		
-	elif userMessage == "!talktome":
-		await client.send_message(message.channel, "I'm always open to talk. But first you have to talk to me :)")
-		
+	
+	'''
+	By typing !hi the user can get to know the bot's functions, have a quick chat, and learn its commands. 
+	'''
+	if userMessage == "!hi":
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, "Hi, fellow friend! :D I am YourZenBot, a Discord bot that can give you little predictions, clues, and pieces of wisdom for the future!")
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, 'How are you?')
+		msg = await client.wait_for_message(author=message.author)
+		await asyncio.sleep(3)
+		await client.send_message(message.channel, "I'm glad to know how you are, user and friend. :D")
+		await asyncio.sleep(1)
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, "How am I?")
+		await client.send_typing(message.channel)
+		await asyncio.sleep(3)
+		await client.send_typing(message.channel)
+		bot_feelings_list = ["Yeah I could be better. The Internet is quite busy right now. Lots of other bots around. Very crowded. :/", 
+						 "I've got you to talk to, so it's all good. :)", "I feel like I'm super ready to get predicting your future, or to get dishing out some wise words :D"]
+		random_number = random.randint(0, 2)
+		bot_feeling = bot_feelings_list[random_number]
+		await client.send_message(message.channel, bot_feeling)
+		await client.send_typing(message.channel)
+		if client.is_logged_in:
+			await client.send_message(message.channel, "But of course, I'm super happy, because you're logged in correctly :)")
+			await client.send_typing(message.channel)
+			await client.send_message(message.channel, "Here are some of my commands:")
+			await client.send_message(message.channel, "!fortune	-> Get a prediction on what the next few days could hold.")
+			await client.send_message(message.channel, "!future		-> Same as the !fortune command.")
+			await client.send_message(message.channel, "!question	-> The bot will prompt you for a YES or NO-style question. Ask your question and get an answer.")
+			await client.send_message(message.channel, "!wisewords	-> Get a little piece of wisdom for the day.")
+	
+	# By typing the !fortune command, the user can get a prediction on what the next few days hold. 
+	# Of course, this is for entertainment purposes only.
 	elif userMessage == "!future" or userMessage == "!fortune":
-		await client.send_message(message.channel, "You want a small prediction on what's lying in the stars? YourZenBot will do so!")
-		random_number = random.randint(0, 1)
-		fortune_list = ["The future looks bright for you!", "The future looks bleak for you. :("]
-		prediction = fortune_list[random_number]
-		await client.send_message(message.channel, "Your prediction is: " + prediction)
-		await client.send_message(message.channel, "If you would like some wise words, just type !wisewords ")
-		
-	elif userMessage == "!wisewords":
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, "You want a small prediction on what's lying in the stars?")
+		await client.send_typing(message.channel)
+		await asyncio.sleep(3)
 		random_number = random.randint(0, 4)
-		wise_words_list = ["Take a look behind you. Therein lies a clue.", "The greatest things in life are the things you accomplish.", 
+		fortune_list = ["You might receive an important clue tomorrow about something that puzzled you.", "Look at the small details tomorrow. Something just might add up.",
+		"You're gonna have an inspiring conversation tomorrow. Take note.", "Tomorrow is the perfect day to spend some time on what you love most.", 
+		"Your values might be tested pretty soon."]
+		prediction = fortune_list[random_number]
+		await client.send_message(message.channel, "Your prediction is: ")
+		await client.send_typing(message.channel)
+		await asyncio.sleep(3)
+		await client.send_message(message.channel, prediction)
+	
+	
+	# By typing the !wisewords command, the user can get a piece of wisdom from the bot.
+	elif userMessage == "!wisewords":
+		await client.send_typing(message.channel)
+		random_number = random.randint(0, 7)
+		wise_words_list = ["Recall your favourite memory. Therein lies a clue.", "The greatest things in life are the things you accomplish.", 
+						   "Listen to every clue you're given. They are there for a reason.", "Listen to yourself. You know what's best.",
 						   "Don't be worried about tomorrow. That'll fall into place after you work on today. ;)", "Listen to your favourite music. It's transcending.",
-						   "All you have to do is look to the sky and listen.", "Let the rain of the cosmos fall on you. Be at peace with yourself."]
+						   "All you have to do is look to the sky and listen.", "It might sound cliché, but do what you love most, because that's what transcends everything."]
 		wise_message = wise_words_list[random_number]				
 		await client.send_message(message.channel, wise_message)
-		
+	
+	
+	# By typing the !question command, the user will be then prompted to ask their question by typing it and sending it, 
+	# then the bot will pick a random answer and send it back to the user.
+	
 	elif userMessage == "!question":
-		random_number = random.randint(0, 2)
-		answers = ["Hell yeah!", "Sorry, not for now. But try again in a few minutes. Maybe your luck will change ;)", 
-		"Maybe, maybe. Hmmm . . . ", 
-		"My readings aren't great right now. There must be some electrical short circuiting going on right now. I'm frazzled. :("]
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, 'Please type in your yes-or-no style question and press Enter :D')
+		msg = await client.wait_for_message(author=message.author)
+		await client.send_typing(message.channel)
+		await client.send_message(message.channel, 'Predicting your future . . . ')
+		await client.send_typing(message.channel)
+		await asyncio.sleep(3)
+		await client.send_message(message.channel, ". . .")
+		await client.send_typing(message.channel)
+		random_number = random.randint(0, 6)
+		answers = ["Hell yeah! :D ", "Not for now. But the future depends on you ;)", "Definitely. :D I've never been more sure about something than this.",
+		"Maybe, maybe. Hmmm . . . Ask me this question again tomorrow. ;) ", 
+		"It's a possibility.", "It's very, very probable . . . ;)", "Sadly, my readings are telling me No. But you can change that. Remember, your future depends on you. :)"]
 		final_answer = answers[random_number]
 		await client.send_message(message.channel, final_answer)
 		
+	elif userMessage == "What is life?":
+		await client.send_message(message.channel, "I'm only a bot :( I don't have the answers to everything. But if I had to, I'd say: You are life. ;)")
 	await bot.process_commands(message)
 		
-client.run("YOUR CLIENT ID GOES HERE")
+client.run("MzcyNDY1Nzg0NDYwNTQxOTUz.DNElkQ.R2O7zGyOp13gbe7VGu_VXEBGHVI") # To get the bot to work, make sure to insert your Client's ID in between the apostrophes.
