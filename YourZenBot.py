@@ -143,3 +143,6 @@ async def on_message(message):
 
 	
 client.run("INSERT YOUR BOT'S TOKEN ID HERE") # To get the bot to work, make sure to insert your generated bot's TOKEN ID in between the apostrophes.
+	await bot.process_commands(message)
+		
+client.run("INSERT YOUR CLIENT ID") # To get the bot to work, make sure to insert your Client's ID in between the apostrophes.
