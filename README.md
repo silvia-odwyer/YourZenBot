@@ -1,6 +1,6 @@
 # YourZenBot
 A basic Discord bot that acts as a Magic 8 Ball/fortune cookie, and provides little pieces of wisdom when you ask for them.
-![Using the !fortune command to get a small prediction on what's lying in the stars] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
+![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
 ## What Is YourZenBot?
 YourZenBot is a Discord bot written using the Discord.py Library that can send you clues on what your future holds, answer some yes-or-no style questions, and give pieces of wisdom. 
@@ -24,13 +24,13 @@ Just ask YourZenBot for advice! This basic Discord bot can be both your confidan
 
 ## Examples Of YourZenBot In Action
 You can use `!fortune` to get a small prediction on what tomorrow holds. 
-![Using the !fortune command to get a small prediction on what's lying in the stars] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
+![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
 Or if you want to ask the bot a question, just type `!question`
-! [Using the !question command to ask the bot a yes-or-no style question] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
+![Using the !question command to ask the bot a yes-or-no style question](https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
 
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
-! [Using the !wisewords command to get a small piece of wisdom] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
+![Using the !wisewords command to get a small piece of wisdom](https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
 
 
 ## How To Use YourZenBot
@@ -45,9 +45,10 @@ This bot uses the Discord.py Library.
 and typing the following:
 `python3 -m pip install -U discord.py `
 
-2. Go to: 
+2. Then, go to: 
 https://discordapp.com/developers/applications/me
-Click on "Make App". Then once the page has loaded, click on the option that allows you to make a bot. Call the bot "YourZenBot". 
+
+Click on "Make App". Once the page has loaded, click on the option that allows you to make a bot. Call the bot "YourZenBot". 
 
 3. Invite the bot you created to your server by replacing INSERT_YOUR_CLIENT_ID with your bot's client ID: https://discordapp.com/oauth2/authorize?&client_id=INSERT_YOUR_CLIENT_ID_HERE&scope=bot&permissions=0
 
