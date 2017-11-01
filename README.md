@@ -30,6 +30,7 @@ Or if you want to ask the bot a question, just type `!question`
 ![Using the !question command to ask the bot a yes-or-no style question](https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
 
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
+
 ![Using the !wisewords command to get a small piece of wisdom](https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
 
 
@@ -50,7 +51,7 @@ https://discordapp.com/developers/applications/me
 
 Click on "Make App". Once the page has loaded, click on the option that allows you to make a bot. Call the bot "YourZenBot". 
 
-3. Invite the bot you created to your server by replacing INSERT_YOUR_CLIENT_ID with your bot's client ID: https://discordapp.com/oauth2/authorize?&client_id=INSERT_YOUR_CLIENT_ID_HERE&scope=bot&permissions=0
+3. Invite the bot you created to your server by replacing INSERT_YOUR_CLIENT_ID_HERE with your bot's client ID: https://discordapp.com/oauth2/authorize?&client_id=INSERT_YOUR_CLIENT_ID_HERE&scope=bot&permissions=0
 
 4. Then, download my YourZenBot.py file, and paste your TOKEN ID into the last line of my YourZenBot.py file. 
 
