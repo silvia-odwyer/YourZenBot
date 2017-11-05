@@ -9,6 +9,7 @@ import discord
 import asyncio
 import random
 import time
+import datetime
 from discord.ext import commands
 
 client = discord.Client()
@@ -28,24 +29,50 @@ async def on_ready():
 	print("Your client user ID is: ", client.user.id)
 	print("------")
 	print("Has the client logged in?", client.is_logged_in)
+	
 
 @client.event
 async def on_message(message):
+	
 	userMessage = message.content.lower()
 	
-	'''
-	By typing !hi the user can get to know the bot's functions, have a quick chat, and learn its commands. 
-	'''
-	if userMessage == "!hi":
+	if userMessage == "!day":
+		month_and_day = ""
+		now = datetime.datetime.now()
+		month_and_day = str(now.day) + "-" + str(now.month)
+		await client.send_typing(message.channel)
+		# The national days marked below are mainly found in Europe. Localization to other regions will be implemented in future updates. 
+		national_days_dictionary = {"13-2": "It's the International Day of Women and Girls in Science :D", 
+									"13-2": "It's World Radio Day :D Get your radio on and BLAST THOSE AIRWAVES ;D", 
+									"21-2": "It's International Mother Language Day. Get speakin'. ;)", 
+									"21-3": "World Poetry Day has fallen. Thou must write ornate lines and show them to the celestial skies.", 
+									"15-8": "It's International Day of Democracy. We must keep fighting for it!", 
+									"20-8": "Any math lovers in the room? It's World Statistics Day today!", 
+									"1-11": "It's All Saints Day today. Remember your loved ones!",
+									"2-11": "It's All Souls Day today. BTW, it's National Stress Awareness Day, too.",
+									"3-11": "No National Day today, but it's National Novel Writing month. Get writing :)",
+									"5-11": "It's Guy Fawkes Day over in Australia."}
+		national_day = national_days_dictionary.get(month_and_day)
+		await client.send_message(message.channel, national_day)
+
+	# By typing !hi the user can get to know the bot's functions, have a quick chat, and learn its commands. 
+	
+	elif userMessage == "!hi":
 		await client.send_typing(message.channel)
 		await client.send_message(message.channel, "Hi, 👀 fellow friend! :D I am YourZenBot, a Discord bot that can give you little predictions, clues, and pieces of wisdom for the future!")
 		await client.send_typing(message.channel)
 		await client.send_message(message.channel, 'How are you?')
 		msg = await client.wait_for_message(author=message.author)
+<<<<<<< HEAD
 		await asyncio.sleep(3)
 		if msg == "fine":
 			await client.send_message(message.channel, "I'm fine too.")
 		await client.send_message(message.channel, "🍭 I'm glad to know how you are, user and friend. :D")
+=======
+		await client.send_typing(message.channel)
+		await asyncio.sleep(2)
+		await client.send_message(message.channel, "I'm glad to know how you are, user and friend. :D")
+>>>>>>> 4de5cf13e410c5fcc8cfcdc45752fa7e9e7e8aa1
 		await asyncio.sleep(1)
 		await client.send_typing(message.channel)
 		await client.send_message(message.channel, "How am I?")
@@ -123,6 +150,7 @@ async def on_message(message):
 		await client.send_message(message.channel, "I'm only a bot :( I don't have the answers to everything. But if I had to, I'd say: You are life. ;)")
 		await bot.process_commands(message)
 	
+<<<<<<< HEAD
 	# By typing !luckycolour, the user can get their lucky colour for the next day. This can be for fashion styles, choosing clothes or decor!
 	elif userMessage == "!luckycolour":
 		await client.send_typing(message.channel)
@@ -133,5 +161,15 @@ async def on_message(message):
 		await client.send_message(message.channel, "Your lucky colour for tomorrow is going to be: ")
 		await client.send_message(message.channel, lucky_colour)
 
+=======
+	elif userMessage == "!time":
+		await client.send_typing(message.channel)
+		now = datetime.datetime.now()
+		await client.send_message(message.channel, "The time is " + str(now))
+
+	
+client.run("INSERT YOUR BOT'S TOKEN ID HERE") # To get the bot to work, make sure to insert your generated bot's TOKEN ID in between the apostrophes.
+	await bot.process_commands(message)
+>>>>>>> 4de5cf13e410c5fcc8cfcdc45752fa7e9e7e8aa1
 		
 client.run("INSERT YOUR CLIENT TOKEN HERE") # To get the bot to work, make sure to insert your Client's ID in between the apostrophes.
