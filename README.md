@@ -3,8 +3,6 @@ A basic Discord bot that acts as a Magic 8 Ball/fortune cookie, and provides lit
 
 ![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
-![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
-
 ## What Is YourZenBot?
 YourZenBot is a Discord bot written using the Discord.py Library that can send you clues on what your future holds, answer some yes-or-no style questions, and give pieces of wisdom. 
 
@@ -31,6 +29,7 @@ You can use `!fortune` to get a small prediction on what tomorrow holds.
 ![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
 Or if you want to ask the bot a question, just type `!question`
+
 ![Using the !question command to ask the bot a yes-or-no style question](https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
 
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
