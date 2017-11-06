@@ -1,10 +1,9 @@
 # YourZenBot
 A basic Discord bot that acts as a Magic 8 Ball/fortune cookie, and provides little pieces of wisdom when you ask for them.
-<<<<<<< HEAD
+
 ![Using the !fortune command to get a small prediction on what's lying in the stars] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
-=======
+
 ![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
->>>>>>> 4de5cf13e410c5fcc8cfcdc45752fa7e9e7e8aa1
 
 ## What Is YourZenBot?
 YourZenBot is a Discord bot written using the Discord.py Library that can send you clues on what your future holds, answer some yes-or-no style questions, and give pieces of wisdom. 
@@ -28,7 +27,7 @@ Just ask YourZenBot for advice! This basic Discord bot can be both your confidan
 
 ## Examples Of YourZenBot In Action
 You can use `!fortune` to get a small prediction on what tomorrow holds. 
-<<<<<<< HEAD
+
 ![Using the !fortune command to get a small prediction on what's lying in the stars] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
 Or if you want to ask the bot a question, just type `!question`
@@ -36,7 +35,7 @@ Or if you want to ask the bot a question, just type `!question`
 
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
 ! [Using the !wisewords command to get a small piece of wisdom] (https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
-=======
+
 ![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
 Or if you want to ask the bot a question, just type `!question`
@@ -45,8 +44,6 @@ Or if you want to ask the bot a question, just type `!question`
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
 
 ![Using the !wisewords command to get a small piece of wisdom](https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
->>>>>>> 4de5cf13e410c5fcc8cfcdc45752fa7e9e7e8aa1
-
 
 ## How To Use YourZenBot
 ### What do you need?
@@ -60,20 +57,18 @@ This bot uses the Discord.py Library.
 and typing the following:
 `python3 -m pip install -U discord.py `
 
-<<<<<<< HEAD
 2. Go to: 
 https://discordapp.com/developers/applications/me
 Click on "Make App". Then once the page has loaded, click on the option that allows you to make a bot. Call the bot "YourZenBot". 
 
 3. Invite the bot you created to your server by replacing INSERT_YOUR_CLIENT_ID with your bot's client ID: https://discordapp.com/oauth2/authorize?&client_id=INSERT_YOUR_CLIENT_ID_HERE&scope=bot&permissions=0
-=======
+
 2. Then, go to: 
 https://discordapp.com/developers/applications/me
 
 Click on "Make App". Once the page has loaded, click on the option that allows you to make a bot. Call the bot "YourZenBot". 
 
 3. Invite the bot you created to your server by replacing INSERT_YOUR_CLIENT_ID_HERE with your bot's client ID: https://discordapp.com/oauth2/authorize?&client_id=INSERT_YOUR_CLIENT_ID_HERE&scope=bot&permissions=0
->>>>>>> 4de5cf13e410c5fcc8cfcdc45752fa7e9e7e8aa1
 
 4. Then, download my YourZenBot.py file, and paste your TOKEN ID into the last line of my YourZenBot.py file. 
 
