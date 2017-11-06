@@ -33,9 +33,8 @@ Or if you want to ask the bot a question, just type `!question`
 ![Using the !question command to ask the bot a yes-or-no style question](https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
 
 If you type `!wisewords`, YourZenBot will output a piece of wisdom to you, such as: "Don't worry about tomorrow! :) It will sort out itself."
-![Using the !wisewords command to get a small piece of wisdom](https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
 
-![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
+![Using the !wisewords command to get a small piece of wisdom](https://github.com/silvia-odwyer/YourZenBot/blob/master/!wisewords_command.PNG)
 
 Or if you want to ask the bot a question, just type `!question`
 ![Using the !question command to ask the bot a yes-or-no style question](https://github.com/silvia-odwyer/YourZenBot/blob/master/!question_command.PNG)
