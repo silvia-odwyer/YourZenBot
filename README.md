@@ -1,5 +1,5 @@
 # YourZenBot
-A basic Discord bot that acts as a Magic 8 Ball/fortune cookie, and provides little pieces of wisdom when you ask for them.
+A basic Discord bot that simulates a Magic 8 Ball, and provides small pieces of wisdom when you ask for them.
 
 ![Using the !fortune command to get a small prediction on what's lying in the stars](https://github.com/silvia-odwyer/YourZenBot/blob/master/!fortune_command.PNG)
 
